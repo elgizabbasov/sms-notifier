@@ -10,11 +10,12 @@ import (
 )
 
 var (
-	accountSid string
-	authToken  string
-	fromPhone  string
-	toPhone    string
-	client     *twilio.RestClient
+	accountSid  string
+	authToken   string
+	fromPhone   string
+	toPhone     string
+	client      *twilio.RestClient
+	subjectLine string
 )
 
 func SendMessage(message string) {
@@ -52,8 +53,10 @@ func init() {
 func main() {
 	fmt.Println("Welcome to Notifier!")
 
-	if extract() != "" {
-		message := fmt.Sprintf(os.Getenv("MSG"), extract())
+	subjectLine = extract()
+
+	if subjectLine != "" {
+		message := fmt.Sprintf(os.Getenv("MSG"), subjectLine)
 		SendMessage(message)
 	} else {
 		fmt.Println("No need to send SMS!")
