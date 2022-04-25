@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/LDCS/ezGmail"
+	"github.com/elgizabbasov/ezGmail"
 )
 
 var (

@@ -3,7 +3,7 @@ module notifier
 go 1.18
 
 require (
-	github.com/LDCS/ezGmail v0.0.0-20160229085812-663fe4e5d008
+	github.com/elgizabbasov/ezGmail v0.0.0-20220425210741-b921291dcaa2
 	github.com/joho/godotenv v1.4.0
 	github.com/twilio/twilio-go v0.24.1
 )
