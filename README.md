@@ -1,1 +1,2 @@
 # Notifier
+go run *.go
